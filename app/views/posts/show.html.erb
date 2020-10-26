@@ -1,4 +1,9 @@
-<h1><%= @post.member.email %></h1>
+<% if member_signed_in? %>
+    <h1><%= @post.member.name %></h1>
+<% else %>
+    <h1><%= link_to "Sign in", new_member_session_path %> to see which Member made this Post!</h1>
+<% end %>
+
 <p>
     <%= @post.body %>
 </p>
