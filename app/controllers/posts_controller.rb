@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @post = Post.new
   end
 
   def show
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
     @post.member_id = current_member.id
 
     if @post.save
-      redirect_to @post, notice: "Post successfully created."
+      redirect_to posts_path, notice: "Post successfully created."
     else
       flash.now[:alert] = "Woops! There was an error saving your Post."
       render :new
