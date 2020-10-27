@@ -6,24 +6,35 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to "All Posts", posts_path %></li>
-        <% if member_signed_in? %>
-          <%= link_to "Sign Out", destroy_member_session_path, method: :delete %>
-          <%= link_to current_member.name, edit_member_registration_path %>
-        <% else %>
-        <%= link_to "Sign In", new_member_session_path %>
-        <%= link_to "Sign Up", new_member_registration_path %>
-        <% end %>
-      </ul>
-    </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <header>
+      <nav id="main-nav">
+        <div class="home-link">
+        <a href="<%= posts_path %>">
+           <div class="icon">
+            <%= inline_svg_tag "crown.svg" %>
+          </div>
+          <h1>Members Club</h1>
+        </a>
+        </div>
+       
+        <ul>
+          <% if member_signed_in? %>
+            <li class="main-nav-link action-link vibrant-link"><%= link_to "Sign Out", destroy_member_session_path, method: :delete %></li>
+            <li class="main-nav-link action-link standard-link"><%= link_to current_member.name, edit_member_registration_path %></li>
+          <% else %>
+          <li class="main-nav-link action-link vibrant-link"><%= link_to "Sign Up", new_member_registration_path %></li>
+          <li class="main-nav-link action-link standard-link"><%= link_to "Sign In", new_member_session_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </header>
   </body>
 </html>
