@@ -1,0 +1,8 @@
+<div class="recommended-grid">
+    <% @posts.last(3).map { |post| post.member }.uniq.each_with_index do |member, i| %>
+            <div class="recommended-post-<%=i%>">
+            <%= image_tag "dog" %>    
+            <p><%= member.name %></p>
+            </div>
+    <% end %>
+</div>

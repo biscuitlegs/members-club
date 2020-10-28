@@ -1,0 +1,28 @@
+<div class="posts-list">
+    <h1>Posts</h1>
+    <ul>
+        <% @posts.each do |post| %>
+            <a href="<%= post_path(post) %>">
+                <div class="post-container">
+                    <% if member_signed_in? %>
+                        <div class="member-name">
+                            <div class="small-icon">
+                                <%= inline_svg_tag "crown_small.svg" %>
+                            </div>
+                            <p><%= post.member.name %></p>
+                        </div>
+                    <% else %>
+                        <div class="member-name">
+                            <div class="small-icon">
+                                <%= inline_svg_tag "crown_small.svg" %>
+                            </div>
+                            <p>Anonymous</p>
+                        </div>
+                    <% end %>
+                    <%= image_tag "dog" %>
+                    <p><%= post.body %></p>
+                </div>
+            </a>
+        <% end %>
+    </ul>
+</div>

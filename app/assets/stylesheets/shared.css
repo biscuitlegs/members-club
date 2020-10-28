@@ -8,3 +8,28 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.notice {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #537464;
+    border-radius: 10px;
+    width: 55%;
+    margin: 10px auto 0 auto;
+    background-color: #81b29a;
+
+}
+
+.alert {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #a5464e;
+    border-radius: 10px;
+    width: 55%;
+    margin: 10px auto 0 auto;
+    background-color: #df5f6a;
+}

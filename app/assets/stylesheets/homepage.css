@@ -1,10 +1,18 @@
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "left middle right";
+    grid-template-rows: 1fr 50px;
+    grid-template-areas: "left middle right"
+                         "footer footer footer";
     height: 100vh;
     width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    display: block;
+    height: 100px;
+    width: 100%
 }
 
 .left {
@@ -27,7 +35,7 @@
     text-align: center;
     border: 1px solid #ddd9d9;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     height: 370px;
     box-shadow: 1px 2px #ddd9d9;
 }
@@ -76,10 +84,10 @@
 
 .posts-list {
     text-align: center;
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
     border: 1px solid #ddd9d9;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     
     box-shadow: 1px 2px #ddd9d9;
 }
@@ -145,3 +153,155 @@
     color: #7640a8;
 }
 
+.main-grid .info {
+    text-align: center;
+    padding-top: 30px;
+    color: #424141;
+}
+
+.main-grid .info a {
+    color: #7640a8;
+}
+
+.member-info-container {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    border: 1px solid #ddd9d9;
+    border-radius: 10px;
+    width: 90%;
+    height: 300px;
+    box-shadow: 1px 2px #ddd9d9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "image member"
+                         "posts posts"
+                         "views views";
+}
+
+.member-info-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 30px 10px 0 10px;
+    grid-area: image;
+    float: right;
+}
+
+.member-info-container h3 {
+    grid-area: member;
+    padding-top: 50px;
+    text-align: left;
+    font-size: 1.5em;
+    color: #7640a8;
+    float: left;
+}
+
+.member-info-container h2 {
+    grid-area: member;
+    padding-top: 50px;
+    text-align: left;
+    font-size: 1.5em;
+    color: #7640a8;
+    float: left;
+}
+
+.posts-count {
+    grid-area: posts;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.3em;
+    color: #424141;
+    padding-top: 10px;
+}
+
+.posts-count span, .views-count span{
+    font-weight: normal;
+}
+
+.views-count {
+    grid-area: views;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.3em;
+    color: #424141;
+    padding-bottom: 10px;
+}
+
+.recommended-container {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    border: 1px solid #ddd9d9;
+    border-radius: 10px;
+    width: 90%;
+    height: 300px;
+    box-shadow: 1px 2px #ddd9d9;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "title"
+                         "posts";
+}
+
+.recommended-container h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: #7640a8;
+    grid-area: title;
+}
+
+.recommended-feed img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 0 10px 20px;
+    float: left;
+}
+
+.recommended-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "0"
+                         "1"
+                         "2";
+}
+
+.recommended-post-0 {
+    grid-area: 0
+}
+
+.recommended-post-1 {
+    grid-area: 1
+}
+
+.recommended-post-2 {
+    grid-area: 2
+}
+
+.recommended-grid p {
+    text-align: center;
+    padding: 10px 50px 0 0px;
+    font-size: 1em;
+}
+
+.sign-in-container {
+    margin: 30px auto 0 auto;
+    border: 1px solid #ddd9d9;
+    border-radius: 10px;
+    width: 90%;
+    height: 170px;
+    padding: 0 10px 0 10px;
+    box-shadow: 1px 2px #ddd9d9;
+}
+
+.sign-up-container {
+    margin: 30px auto 0 auto;
+    border: 1px solid #ddd9d9;
+    border-radius: 10px;
+    width: 90%;
+    height: 120px;
+    padding: 0 10px 0 10px;
+    box-shadow: 1px 2px #ddd9d9;
+}
