@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post.increment!(:view_count)
   end
 
   def new
@@ -16,6 +17,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.member_id = current_member.id
+    @post.view_count = 0
 
     if @post.save
       redirect_to posts_path, notice: "Post successfully created."

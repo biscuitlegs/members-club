@@ -6,7 +6,7 @@
                 <%= image_tag "dog" %>
                 <h3><%= current_member.name %></h3>
                 <h4 class="posts-count">Posts: <span><%= current_member.posts.size %></span></h4>
-                <h4 class="views-count">Views: <span>5</span></h4>
+                <h4 class="views-count">Views: <span><%= total_views(current_member) %></span></h4>
             </div>
         <% else %>
             <div class="sign-in-container">
