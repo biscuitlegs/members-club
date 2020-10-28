@@ -229,12 +229,14 @@ footer {
 }
 
 .recommended-container {
+    position: fixed;
+    left: 81%;
     margin: 30px auto 0 auto;
     text-align: center;
     border: 1px solid #ddd9d9;
     border-radius: 10px;
-    width: 90%;
-    height: 300px;
+    width: 300px;
+    height: 350px;
     box-shadow: 1px 2px #ddd9d9;
     display: grid;
     grid-template-columns: 1fr;
@@ -246,6 +248,7 @@ footer {
 .recommended-container h2 {
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 10px;
     color: #7640a8;
     grid-area: title;
 }
@@ -268,15 +271,39 @@ footer {
                          "2";
 }
 
-.recommended-post-0 {
-    grid-area: 0
+.recommended-grid .small-icon svg {
+    margin-left: 10px;
 }
 
-.recommended-post-1 {
+.recommended-member {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.recommended-member a {
+    text-decoration: none;
+    color: #7640a8;
+    text-align: left;
+}
+
+.recommended-member p {
+    margin-right: 50px;
+}
+
+.recommended-member:hover {
+    background-color: rgb(250, 248, 248);
+    cursor: pointer;
+}
+
+.recommended-member-0 {
+    grid-area: 0;
+}
+
+.recommended-member-1 {
     grid-area: 1
 }
 
-.recommended-post-2 {
+.recommended-member-2 {
     grid-area: 2
 }
 

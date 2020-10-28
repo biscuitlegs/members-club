@@ -1,8 +1,19 @@
 <div class="recommended-grid">
-    <% @posts.last(3).map { |post| post.member }.uniq.each_with_index do |member, i| %>
-            <div class="recommended-post-<%=i%>">
-            <%= image_tag "dog" %>    
-            <p><%= member.name %></p>
-            </div>
+    <% @posts.last(3).map { |post| post.member }.uniq.select do |member|
+        if member_signed_in?
+            member.name.downcase != current_member.name.downcase
+        else
+            member
+        end
+    end.each_with_index do |member, i| %>
+        <div class="recommended-member recommended-member-<%=i%>">
+            <a href="<%= member %>">
+                <%= image_tag "dog" %>
+                <div class="small-icon">
+                    <%= inline_svg_tag "crown_small.svg" %>
+                </div>    
+                <p><%= member.name %></p>
+            </a>
+        </div>      
     <% end %>
 </div>
