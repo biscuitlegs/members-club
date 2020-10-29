@@ -339,3 +339,39 @@ footer {
     grid-area: icon;
     padding-left: 30px;
 }
+
+@media only screen and (max-width: 1400px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: 30px 1fr 30px;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas: ". middle ."
+                             ". footer .";
+        height: 100vh;
+        width: 100%;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .recommended-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5px;
+        grid-template-areas: "middle"
+                             "footer";
+        height: 100vh;
+        width: 100%;
+    }
+}
