@@ -68,3 +68,50 @@
 .field input[type=checkbox] {
     width: 30px;
 }
+
+.edit-post-form {
+    text-align: center;
+    margin: 10vh auto 0 auto;
+    border: 1px solid #ddd9d9;
+    border-radius: 10px;
+    width: 50%;
+    height: 55vh;
+}
+
+.edit-post-form h1 {
+    color: #7640a8;
+    margin-top: 30px;
+}
+
+.edit-post-form textarea {
+    margin: 20px auto 0 auto;
+    height: 200px;
+    width: 90%;
+    border: 1px solid #ddd9d9;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    font-size: 1em;
+    color: #424141;
+}
+
+.edit-post-form textarea:focus {
+    outline: none;
+    border: 2px solid #7640a8;
+}
+
+.edit-post-form input {
+    height: 50px;
+    width: 200px;
+    background-color: #7640a8;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.edit-post-form input:hover {
+    background-color: #4d2870;
+    cursor: pointer;
+}

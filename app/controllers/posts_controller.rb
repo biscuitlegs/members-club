@@ -1,13 +1,15 @@
 class PostsController < ApplicationController
   before_action :get_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_member!, except: [:index, :show]
 
   def index
     @posts = Post.all
     @post = Post.new
+
+    @posts.each { |post| post.increment!(:view_count) }
   end
 
   def show
-    @post.increment!(:view_count)
   end
 
   def new
@@ -32,7 +34,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to @post, notice: "Post successfully updated."
+      redirect_to posts_path, notice: "Post successfully updated."
     else
       flash.now[:alert] = "Woops! There was an error updating your Post."
       render :edit

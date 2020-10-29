@@ -88,7 +88,6 @@ footer {
     border: 1px solid #ddd9d9;
     border-radius: 10px;
     width: 100%;
-    
     box-shadow: 1px 2px #ddd9d9;
 }
 
@@ -114,9 +113,10 @@ footer {
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: "image member"
-                         "image text";
+                         "image text"
+                         "icon icon";
 }
 
 .post-container:hover {
@@ -331,4 +331,17 @@ footer {
     height: 120px;
     padding: 0 10px 0 10px;
     box-shadow: 1px 2px #ddd9d9;
+}
+
+.edit-icon {
+    width: 30px;
+    height: 30px;
+    grid-area: icon;
+}
+
+.delete-icon {
+    width: 30px;
+    height: 30px;
+    grid-area: icon;
+    padding-left: 30px;
 }
