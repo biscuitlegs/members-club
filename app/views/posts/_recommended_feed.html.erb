@@ -7,13 +7,11 @@
         end
     end.each_with_index do |member, i| %>
         <div class="recommended-member recommended-member-<%=i%>">
-            <a href="<%= member %>">
                 <%= image_tag "dog" %>
                 <div class="small-icon">
                     <%= inline_svg_tag "crown_small.svg" %>
                 </div>    
                 <p><%= member.name %></p>
-            </a>
         </div>      
     <% end %>
 </div>
