@@ -1,0 +1,28 @@
+
+
+.post-title {
+    text-align: center;
+    margin-top: 20px;
+    color: #7640a8;
+}
+
+.post-body {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.button {
+    margin: 30px 0 0 30px;
+    background-color: #7640a8;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.button p {
+    color: #ffffff;
+    padding-top: 15px;
+    width: 100px;
+}

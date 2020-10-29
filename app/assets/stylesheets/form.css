@@ -1,0 +1,70 @@
+.form-container {
+   text-align: center;
+   margin: 10vh auto 0 auto;
+   border: 1px solid #ddd9d9;
+   border-radius: 10px;
+   width: 50%;
+   height: 100vh;
+}
+
+.sign-up {
+    height: 75vh;
+}
+
+.sign-in {
+    height: 65vh;
+}
+
+.form-container h2 {
+    font-size: 2.3em;
+    color: #7640a8;
+    margin: 30px;
+
+}
+
+.field {
+    margin: 20px;
+    font-size: 1.5em;
+    color: #424141;
+}
+
+.field input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd9d9;
+    outline: none;
+    font-size: 0.7em;
+    text-align: center;
+    color: #424141;
+    padding-left: 20px;
+}
+
+.field input:focus {
+    border: 1px solid #ddd9d9;
+    border: 2px solid #7640a8;
+}
+
+.actions input {
+    width: 200px;
+    height: 50px;
+    background-color: #7640a8;
+    border: 1px solid #7640a8;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1.3em;
+    margin: 20px 0 0 0;
+}
+
+.actions input:hover {
+    background-color: #5c3185;
+    cursor: pointer;
+}
+
+.form-extras {
+    margin: 20px 0 0 0;
+}
+
+.field input[type=checkbox] {
+    width: 30px;
+}
